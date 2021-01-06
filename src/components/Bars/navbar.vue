@@ -1,71 +1,50 @@
 <template>
-<v-card>
-  <v-toolbar
-      color="white"
-      flat
+  <v-card color="basil">
+    <v-card-title class="text-center justify-center py-6">
+      <h1 class="font-weight-bold display-3 basil--text">
+        BASiL
+      </h1>
+    </v-card-title>
+
+    <v-tabs
+     max-width="250"
+      v-model="tab"
+      background-color="transparent"
+      color="basil"
+      grow
     >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-tab
+        v-for="item in items"
+        :key="item"
+      >
+        {{ item }}
+      </v-tab>
+    </v-tabs>
 
-      <v-toolbar-title>Page title</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
-
-      <template v-slot:extension>
-        <v-tabs
-          v-model="model"
-          centered
-          slider-color="yellow"
+    <v-tabs-items v-model="tab">
+      <v-tab-item
+        v-for="item in items"
+        :key="item"
+      >
+        <v-card
+          color="basil"
+          flat
         >
-          <v-tab
-            :href="`#tab-${i}`"
-          >
-            INICIO
-          </v-tab>
-          <v-tab
-            :href="`#tab-${i}`"
-          >
-            CONOCENOS
-          </v-tab>
-          <v-tab
-            :href="`#tab-${i}`"
-          >
-            CATALOOGOS
-          </v-tab>
-          <v-tab
-            :href="`#tab-${i}`"
-          >
-            INSTALACIONES
-          </v-tab>
-          <v-tab
-            :href="`#tab-${i}`"
-          >
-            CONTACTO
-          </v-tab>
-<v-tab
-            :href="`#tab-${i}`"
-          >
-            BLOG
-          </v-tab>
-        </v-tabs>
-      </template>
-    </v-toolbar>
-</v-card>
+          <v-card-text>{{ text[item] }}</v-card-text>
+        </v-card>
+      </v-tab-item>
+    </v-tabs-items>
+  </v-card>
 </template>
-
 <script>
-export default {
-
-}
+  export default {
+    data () {
+      return {
+        tab: null,
+        items: [
+          'Inicio', 'Conocenos', 'Catálogos','Instalaciones','Contacto','Blog',
+        ],
+        text: {'Inicio':'a', 'Conocenos':'b', 'Catálogos':'c','Instalaciones':'d','Contacto':'e','Blog':'f'}  ,}
+    },
+  }
 </script>
-
-<style>
-
-</style>
