@@ -2,20 +2,22 @@
 <div>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-  <v-card class="overflow-hidden">
+  <div>
     <v-app-bar
+    class="bar"
+    
       absolute
-      color="#F3752B"
       dark
       shrink-on-scroll
       src=""
+      style="min-width:800px;"
       fade-img-on-scroll
       scroll-target="#scrolling-techniques-3"
     >
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
-          gradient="to top right, rgba(247, 157, 92,.7), rgba(243, 117, 43,.7)"
+          gradient="to top right, rgba(255, 255, 255,0), rgba(255, 255, 255,0)"
         ></v-img>
       </template>
 
@@ -25,9 +27,9 @@
         <v-img class="smallSc" max-width="170" :src="img">
           </v-img>
          </v-app-bar-title>
-         <div class="smallSc" style="margin-top:auto;margin-bottom:auto;">
-         <v-app-bar-title style="margin-top:auto;font-size:1.4em; margin-bottom:auto;font-family: 'Dancing Script', cursive; margin-left:2rem">
-           Tornillos Águila <br>S.A. de C.V.
+         <div class="smallSc" style="margin-top:4rem;margin-bottom:auto;">
+         <v-app-bar-title style="color:orange;margin-top:auto;font-size:1.4em; margin-bottom:auto;font-family: 'Dancing Script', cursive; margin-left:2rem">
+           Tornillos Águila S.A. de C.V.
            </v-app-bar-title>
          </div>
 
@@ -52,9 +54,9 @@
       class="overflow-y-auto"
       max-height="600"
     >
-      <v-container style="height: 130px;"></v-container>
+      <v-container class="barcontent" style="height: 130px;"></v-container>
     </v-sheet>
-  </v-card>
+  </div>
    <v-img class="lgSc" max-width="500" :src="imgM">
           </v-img>
 </div>
@@ -94,6 +96,12 @@ export default {
    .lgSc {
       display: block;
    }
+   .bar{
+     display: none;
+   }
+    .barcontent{
+     display: none;
+   }
 }
 @media (min-width: 768px) {                  
    .smallSc {
@@ -102,5 +110,15 @@ export default {
    .lgSc {
       display: none;
    }
+}
+.bar{
+background: rgba(248,112,47,1);
+background: -moz-linear-gradient(top, rgba(248,112,47,1) 0%, rgba(241,111,92,1) 38%, rgba(240,47,23,1) 38%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,112,47,1)), color-stop(38%, rgba(241,111,92,1)), color-stop(38%, rgba(240,47,23,1)), color-stop(38%, rgba(255,255,255,1)), color-stop(38%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+background: -webkit-linear-gradient(top, rgba(248,112,47,1) 0%, rgba(241,111,92,1) 38%, rgba(240,47,23,1) 38%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 100%);
+background: -o-linear-gradient(top, rgba(248,112,47,1) 0%, rgba(241,111,92,1) 38%, rgba(240,47,23,1) 38%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 100%);
+background: -ms-linear-gradient(top, rgba(248,112,47,1) 0%, rgba(241,111,92,1) 38%, rgba(240,47,23,1) 38%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 100%);
+background: linear-gradient(to bottom, rgba(248,112,47,1) 0%, rgba(241,111,92,1) 38%, rgba(240,47,23,1) 38%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8702f', endColorstr='#ffffff', GradientType=0 );
 }
 </style>

@@ -39,43 +39,54 @@
        
       >
         <v-card flat>
-          <v-card-text>dfsdfsdfsdf1s</v-card-text>
+          <v-card-text><Contactanos></Contactanos></v-card-text>
         </v-card>
       </v-tab-item>
        <v-tab-item
        
       >
         <v-card flat>
-          <v-card-text>dfsdfsdfsdf12</v-card-text>
+          <v-card-text><Catalogos></Catalogos></v-card-text>
         </v-card>
       </v-tab-item>
        <v-tab-item
        
       >
         <v-card flat>
-          <v-card-text>dfsdfsdfsdf31</v-card-text>
+          <v-card-text><Instalaciones></Instalaciones></v-card-text>
         </v-card>
       </v-tab-item>
        <v-tab-item
        
       >
         <v-card flat>
-          <v-card-text>dfsdfsdfsdf41</v-card-text>
+          <v-card-text><Contacto></Contacto></v-card-text>
         </v-card>
       </v-tab-item>
 
     </v-tabs-items>
    </div>
+  <Footer> </Footer>
   </div>
 </template>
 
 <script>
 import Navbar from "../Bars/Navbar.vue"
+import Footer from "../Bars/footer.vue"
+import Instalaciones from "./InstalacionesPage.vue"
 import Inicio from "./InicioPage.vue"
+import Catalogos from "./CatalogosPage.vue"
+import Contactanos from "./ContactanosPage.vue"
+import Contacto from "./ContactoPage.vue"
 export default {
     components:{
         Navbar, 
-        Inicio
+        Footer,
+        Instalaciones,
+        Inicio,
+        Catalogos,
+        Contactanos,
+        Contacto
     },
      data () {
       return {
